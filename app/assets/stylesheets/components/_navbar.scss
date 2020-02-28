@@ -1,16 +1,30 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+// }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
 
 .navbar {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px dashed $light-beige;
+
+  .navbar-brand {
+    font-family: 'Dancing Script';
+    font-size: 30px;
+    color: $light-beige;
+    transition: 0.3s;
+  }
+  .navbar-brand:hover {
+    color: $dark-beige;
+  }
+}
+
+.m-left-6 {
+  margin-left: 30px;
 }

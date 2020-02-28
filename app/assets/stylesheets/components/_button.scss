@@ -1,0 +1,13 @@
+.btn {
+  color: $light-beige;
+  border-color: $light-beige;
+  transition: 0.4s;
+  // border-radius: 5px;
+
+  &:hover {
+    color: white;
+    background-color: $dark-beige;
+    border-color: $dark-beige;
+
+  }
+}

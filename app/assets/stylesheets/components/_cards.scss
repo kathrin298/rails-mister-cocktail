@@ -1,22 +1,30 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 450px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   color: white;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: lighter;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: 0.5s;
+  &:hover {
+    font-size: 26px;
+    text-decoration: underline;
+    text-decoration-color: #D77A61;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 30px;
+  margin-top: 30px;
 }
 
 // Smallest device
