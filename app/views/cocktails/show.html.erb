@@ -1,15 +1,21 @@
 <h1><%= @cocktail.name %></h1>
-<div class="container m-ctr p-100">
-  <h3>Ingredients</h3>
-  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
-
-  <ul>
-    <% @ingredients.each do |ingredient| %>
-      <li><%= ingredient.doses[0].description %> <%= ingredient.name %> <%= link_to 'Delete', dose_path(ingredient.dose_ids[0]), method: :delete, data: { confirm: "Sure?" } %> </li>
-    <% end %>
-  </ul>
-
-  <%= link_to 'Back to all cocktails', cocktails_path %>
-
-
+<div class="container m-ctr p-100 d-flex">
+  <div class="image">
+    <%= cl_image_tag @cocktail.photo.key, height: 500 %>
+  </div>
+  <div class="ingredients">
+    <h3>Ingredients <%= link_to new_cocktail_dose_path(@cocktail) do %>
+      <i class="fas fa-plus-circle"></i>
+      <% end %>
+    </h3>
+        <ul>
+      <% @ingredients.each do |ingredient| %>
+        <li><%= ingredient.doses[0].description %> <%= ingredient.name %>
+          <%= link_to dose_path(ingredient.dose_ids[0]), method: :delete, data: { confirm: "Sure?" } do %>
+            <i class="fas fa-minus-circle"></i>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
